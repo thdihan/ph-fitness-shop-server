@@ -22,6 +22,14 @@ const productSchema = new Schema<TProduct>({
     type: String,
     required: true,
   },
+  image: {
+    type: String,
+    required: true,
+  },
+  isFeatured: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 export const Product = model<TProduct>('Product', productSchema);

@@ -4,4 +4,6 @@ export type TProduct = {
   stock: number;
   description: string;
   category: string;
+  image: string;
+  isFeatured: boolean;
 };
