@@ -22,9 +22,15 @@ const updateProductIntoDB = async (productId: string, payload: TProduct) => {
   return result;
 };
 
+const deleteProductFromDB = async (productId: string) => {
+  const result = Product.findByIdAndDelete(productId);
+  return result;
+};
+
 export const ProductService = {
   createProductIntoDB,
   getProductsFromDB,
   getSingleProductFromDB,
   updateProductIntoDB,
+  deleteProductFromDB,
 };
