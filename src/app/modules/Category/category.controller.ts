@@ -16,8 +16,8 @@ const getCategories = catchAsync(async (req, res) => {
 
 const addCategory = catchAsync(async (req, res) => {
   // console.log(req.body);
-  const { category } = req.body;
-  const result = await CategoryService.addCategory({ name: category });
+  const { category, image } = req.body;
+  const result = await CategoryService.addCategory({ name: category, image });
 
   sendResponse(res, {
     statusCode: httpStatus.CREATED,

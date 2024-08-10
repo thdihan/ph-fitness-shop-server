@@ -6,6 +6,9 @@ const CategorySchema = new Schema<TCategory>({
     type: String,
     required: true,
   },
+  image: {
+    type: String,
+  },
 });
 
 export const Category = model<TCategory>('Category', CategorySchema);

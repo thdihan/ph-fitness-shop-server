@@ -4,6 +4,7 @@ import sendResponse from '../../utils/sendResponse';
 import { OrderService } from './order.service';
 
 const createOrder = catchAsync(async (req, res) => {
+  console.log(req.body);
   const result = await OrderService.createOrderIntoDB(req.body);
 
   sendResponse(res, {

@@ -5,8 +5,9 @@ export type TOrder = {
   email: string;
   contact: string;
   address: string;
+  total: number;
   payment: TPayment;
-  items: TItem[];
+  products: TItem[];
 };
 
 export type TPayment = {

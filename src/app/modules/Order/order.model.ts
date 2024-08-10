@@ -46,11 +46,15 @@ const OrderSchema = new Schema<TOrder>(
       type: String,
       required: [true, 'Address is required'],
     },
+    total: {
+      type: Number,
+      required: [true, 'Total is required'],
+    },
     payment: {
       type: PaymentSchema,
       required: [true, 'Payment is required'],
     },
-    items: [ItemsSchema],
+    products: [ItemsSchema],
   },
   {
     timestamps: true,
