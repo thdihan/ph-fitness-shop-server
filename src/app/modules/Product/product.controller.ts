@@ -15,7 +15,9 @@ const createProduct = catchAsync(async (req, res) => {
 });
 
 const getProducts = catchAsync(async (req, res) => {
-  const result = await ProductService.getProductsFromDB();
+  const { category } = req.query;
+
+  const result = await ProductService.getProductsFromDB(category);
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
