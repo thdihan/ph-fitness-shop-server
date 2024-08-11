@@ -12,9 +12,7 @@ import router from './app/routes';
 const app: Application = express();
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const stripe = require('stripe')(
-  'sk_test_51Pkp2rLw1MUS3mw46Oj5y05wwyp0pA4ctNcJ75O8c4vTXLzwSHUJAXKLYwqCeFHVUVlb2IlB2NGpEuDg9O0VXRFV00CLfTs506',
-);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 //parsers
 app.use(express.json());
